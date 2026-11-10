@@ -1,0 +1,6 @@
+# Bundle patch for dsh-clock-radar: one row, one sidebar entry, three tabs
+# (clock / pomodoro / Campus Radar). The Host half only registers the read-only
+# /clock-radar-api proxy; the browser module owns all of the UI.
+- insert:
+    - id: dsh-clock-radar
+      name: dsh-clock-radar

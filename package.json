@@ -1,0 +1,65 @@
+{
+  "name": "dsh-clock-radar",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "One DSH sidebar entry with three tabs: a seconds-precise wallpaper-transparent clock, a pomodoro timer, and the Campus Radar DDL board.",
+  "icon": "./icon.svg",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "clock",
+    "wallpaper",
+    "pomodoro",
+    "campus-radar"
+  ],
+  "author": "Twi-ster",
+  "license": "MIT",
+  "homepage": "https://github.com/Twi-ster/dsh-clock-radar#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Twi-ster/dsh-clock-radar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Twi-ster/dsh-clock-radar/issues"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "dsh": "^0.2.0-rc.1"
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check client.js"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
